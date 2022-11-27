@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <!-- This is a project Will Riffe edited, basic text provided by Coursera Course-->
+    <!-- This is a project Will Riffe edited, basic text provided by Coursera Course 11.27.2022-->
 
     <!-- Required meta tags always come first -->
     <meta charset="utf-8">
@@ -99,10 +99,8 @@
                     <img src="img/logo.png" class="img-fluid ml-lg-5">
                 </div>
                     <div class="col-sm-3 d-flex align-self-center">
-                        <a type="submit" class="btn btn-warning btn-lg" 
-                            data-toggle="tooltip" data-html="true" 
-                            title="Or Call us at <br><strong>+852 12345678</strong>"
-                            data-placement="bottom" href="#reservetable"
+                        <a type="submit" class="btn btn-warning btn-lg"
+                            data-toggle="modal" data-target="#reservetable" 
                             >Reserve Table
                         </a>
                     </div>
@@ -155,74 +153,6 @@
             </div>
         </div>
     </div>
-
-    <!--had to put the reserve table ref into some breaks, otherwise the card was cut off by the navbar-->
-    <div class="col-12 justify-content-center" id="reservetable"><br><br><br></div>
-
-    <!--Card Attempt, form fill task 1 on project 2-->
-    <div class="col-12 col-sm-8 offset-sm-2 justify-content-center">
-        <div class="card">
-
-            <div class="card-header bg-warning text-white fw-bold fs-4">
-                Reserve a Table
-            </div>
-
-            <div class="card-body">
-
-                <div class="row col">
-                    <div class="col-sm-3 text-center text-wrap">Number of Guests</div>
-                        <div class="col-sm-9">
-                            <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" id="1guest" name="selectguestnumber" class="custom-control-input">
-                                <label class="custom-control-label" for="1guest">1</label>
-                            </div>
-                            <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" id="2guest" name="selectguestnumber" class="custom-control-input">
-                                <label class="custom-control-label" for="2guest">2</label>
-                            </div>
-                            <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" id="3guest" name="selectguestnumber" class="custom-control-input">
-                                <label class="custom-control-label" for="3guest">3</label>
-                            </div>
-                            <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" id="4guest" name="selectguestnumber" class="custom-control-input">
-                                <label class="custom-control-label" for="4guest">4</label>
-                            </div>
-                            <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" id="5guest" name="selectguestnumber" class="custom-control-input">
-                                <label class="custom-control-label" for="5guest">5</label>
-                            </div>
-                            <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" id="6guest" name="selectguestnumber" class="custom-control-input">
-                                <label class="custom-control-label" for="6guest">6</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row col">
-                    <form>
-                        <div class="form-group row">
-                            <label for="Date" class="col-sm-3 text-center col-form-label">Date and Time</label>
-                                <div class="col-sm-3">
-                                    <input type="text" class="form-control" id="Date" name="Date" placeholder="Date">
-                                </div>
-                                <div class="col-sm-3">
-                                    <input type="text" class="form-control" id="Time" name="Date" placeholder="Time">
-                                </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="form-group row col ml-md-3 offset-xs-center">
-                    <div>
-                        <button type="submit" class="btn btn-primary">
-                            Reserve
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <br>
 
     <footer class="footer"> 
@@ -268,5 +198,92 @@
         </div>
     </footer>
 </body>
+
+    <!-- Modal Code for Table Reservations -->
+    <!-- I had to put the modal at the bottom of the page to prevent the footer (or some other page element) from being called when the reservation button is engaged-->
+    <div class="modal fade" id="reservetable" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content ">
+            <div class="modal-header bg-warning text-white fw-bold fs-4">
+            <h5 class="modal-title">Reserve a Table</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <form>
+                        <div class="form-group row justify-content-center">
+                            <label for="guestnumber" class="col-sm-3 text-center col-form-label">Number of Guests</label>
+                        <div class="col-6 col-sm-9">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="1guest" name="selectguestnumber" class="custom-control-input">
+                                <label class="custom-control-label" for="1guest">1</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="2guest" name="selectguestnumber" class="custom-control-input">
+                                <label class="custom-control-label" for="2guest">2</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="3guest" name="selectguestnumber" class="custom-control-input">
+                                <label class="custom-control-label" for="3guest">3</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="4guest" name="selectguestnumber" class="custom-control-input">
+                                <label class="custom-control-label" for="4guest">4</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="5guest" name="selectguestnumber" class="custom-control-input">
+                                <label class="custom-control-label" for="5guest">5</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="6guest" name="selectguestnumber" class="custom-control-input">
+                                <label class="custom-control-label" for="6guest">6</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <br>
+
+                <div class="row col">
+                    <form>
+                        <div class="form-group row">
+                            <label for="restaurantsection" class="col-sm-3 text-center col-form-label">Section</label>
+                            <div class="btn-group btn-group-toggle  col-sm-4" data-toggle="buttons">
+                                <label class="btn btn-success active">
+                                    <input type="radio" name="options" id="nonsmoking" autocomplete="off"> Non-Smoking
+                                </label>  
+                                <label class="btn btn-danger">
+                                  <input type="radio" name="options" id="smoking" autocomplete="off" checked> Smoking
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <br>
+
+                <div class="row col">
+                    <form>
+                        <div class="form-group row">
+                            <label for="date" class="col-sm-3 text-center col-form-label">Date and Time</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" id="Date" name="Date" placeholder="Date">
+                                </div>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" id="Time" name="Time" placeholder="Time">
+                                </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Make Reservation</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
 
 </html>
