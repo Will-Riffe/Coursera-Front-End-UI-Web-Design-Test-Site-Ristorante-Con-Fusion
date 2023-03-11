@@ -1,8 +1,11 @@
+
+
 .row-header {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: normal;
     margin: 10px auto;
     padding: 10px auto;
+    color: #efefe1
 }
 
 small {
